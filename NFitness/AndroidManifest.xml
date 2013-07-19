@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="14" />
+        android:targetSdkVersion="17" />
 
     <application
         android:allowBackup="true"
@@ -37,6 +37,10 @@
         </activity>
         <activity
             android:name="com.atanas.tsankov.nfitness.AddWorkoutActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.atanas.tsankov.nfitness.AddExerciseActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity

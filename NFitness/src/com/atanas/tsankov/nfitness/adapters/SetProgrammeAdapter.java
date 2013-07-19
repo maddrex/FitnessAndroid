@@ -13,14 +13,14 @@ import android.widget.TextView;
 
 import com.atanas.tsankov.nfitness.R;
 import com.atanas.tsankov.nfitness.SetProgrammeActivity;
-import com.atanas.tsankov.nfitness.beans.WorkoutBean;
+import com.atanas.tsankov.nfitness.beans.Workout;
 import com.atanas.tsankov.nfitness.holders.SetProgrammeHolder;
 
 public class SetProgrammeAdapter extends BaseAdapter {
-	private List<WorkoutBean> workouts;
+	private List<Workout> workouts;
 	private Context context;
 
-	public SetProgrammeAdapter(List<WorkoutBean> workouts, Context context) {
+	public SetProgrammeAdapter(List<Workout> workouts, Context context) {
 		this.workouts = workouts;
 		this.context = context;
 	}
@@ -45,7 +45,7 @@ public class SetProgrammeAdapter extends BaseAdapter {
 		SetProgrammeHolder holder;
 		if (convertView == null) {
 			LayoutInflater inflater = LayoutInflater.from(context);
-			convertView = inflater.inflate(R.layout.set_programme_item_layout, null);
+			convertView = inflater.inflate(R.layout.set_programme_item, null);
 			holder = new SetProgrammeHolder();
 			convertView.setTag(holder);
 		} else {

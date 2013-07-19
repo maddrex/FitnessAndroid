@@ -19,20 +19,43 @@ import android.widget.ListView;
 
 import com.atanas.tsankov.constants.Constants;
 import com.atanas.tsankov.nfitness.adapters.SetProgrammeAdapter;
-import com.atanas.tsankov.nfitness.beans.ProgrammeBean;
-import com.atanas.tsankov.nfitness.beans.WorkoutBean;
+import com.atanas.tsankov.nfitness.beans.Programme;
+import com.atanas.tsankov.nfitness.beans.Workout;
 import com.google.gson.Gson;
 
 public class SetProgrammeActivity extends Activity {
 
-	private ProgrammeBean programme = new ProgrammeBean();
+	private Programme programme;
 	private SetProgrammeAdapter adapter;
+	private Button addWorkoutButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.set_programme_layout);
-		Button addWorkoutButton = (Button) findViewById(R.id.set_programme_add_workout_button);
+		setContentView(R.layout.set_programme_screen);
+		addWorkoutButton = (Button) findViewById(R.id.set_programme_add_workout_button);
+		setAddWorkoutOnClick();
+		populateWorkoutsAdapter();
+	}
+
+	private void populateWorkoutsAdapter() {
+		String workoutsDir = this.getExternalFilesDir(null).getAbsolutePath()
+				+ "/" + Constants.PROGRAMME_FILE;
+		programme.setWorkouts(new ArrayList<Workout>());
+		String workoutsJson;
+		try {
+			workoutsJson = readFile(workoutsDir);
+			Gson gson = new Gson();
+			programme = gson.fromJson(workoutsJson, Programme.class);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		ListView listOfWorkouts = (ListView) findViewById(R.id.set_programme_list);
+		adapter = new SetProgrammeAdapter(programme.getWorkouts(), this);
+		listOfWorkouts.setAdapter(adapter);
+	}
+
+	private void setAddWorkoutOnClick() {
 		addWorkoutButton.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -42,21 +65,6 @@ public class SetProgrammeActivity extends Activity {
 				startActivityForResult(intent, 0);
 			}
 		});
-		String workoutsDir = this.getExternalFilesDir(null).getAbsolutePath() + "/"
-				+ Constants.PROGRAMME_FILE;
-		programme.setWorkouts(new ArrayList<WorkoutBean>());
-		String workoutsJson;
-		try {
-			workoutsJson = readFile(workoutsDir);
-			Gson gson = new Gson();
-			programme = gson.fromJson(workoutsJson, ProgrammeBean.class);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		ListView listOfWorkouts = (ListView) findViewById(R.id.set_programme_list);
-		adapter = new SetProgrammeAdapter(programme.getWorkouts(), this);
-		listOfWorkouts.setAdapter(adapter);
-
 	}
 
 	@Override
@@ -65,7 +73,7 @@ public class SetProgrammeActivity extends Activity {
 
 			if (resultCode == RESULT_OK) {
 				String name = data.getStringExtra(Constants.NAME);
-				WorkoutBean workout = new WorkoutBean(name);
+				Workout workout = new Workout(name);
 				programme.getWorkouts().add(workout);
 				updateJsonInfo();
 				adapter.notifyDataSetChanged();
