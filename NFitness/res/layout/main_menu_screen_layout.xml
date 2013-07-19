@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/start_workout_button"
+        android:layout_height="65dp"
+        android:layout_width="190dp"
+        android:text="@string/start_workout" />
+    <Button
+        android:id="@+id/set_programme_button"
+        android:layout_height="65dp"
+        android:layout_width="190dp"
+        android:text="@string/set_programme"
+        android:layout_marginTop="50dp" />
+</LinearLayout>
