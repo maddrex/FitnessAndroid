@@ -17,11 +17,11 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.atanas.tsankov.constants.Constants;
 import com.atanas.tsankov.nfitness.R;
 import com.atanas.tsankov.nfitness.adapters.SetProgrammeAdapter;
 import com.atanas.tsankov.nfitness.beans.Programme;
 import com.atanas.tsankov.nfitness.beans.Workout;
+import com.atanas.tsankov.nfitness.constants.Constants;
 import com.google.gson.Gson;
 
 public class SetProgrammeActivity extends Activity {

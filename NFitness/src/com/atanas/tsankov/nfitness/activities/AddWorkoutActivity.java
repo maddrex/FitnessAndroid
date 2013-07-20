@@ -8,8 +8,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.atanas.tsankov.constants.Constants;
 import com.atanas.tsankov.nfitness.R;
+import com.atanas.tsankov.nfitness.constants.Constants;
 
 public class AddWorkoutActivity extends Activity {
 

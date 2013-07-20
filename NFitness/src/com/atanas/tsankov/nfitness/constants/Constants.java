@@ -1,4 +1,4 @@
-package com.atanas.tsankov.constants;
+package com.atanas.tsankov.nfitness.constants;
 
 public class Constants {
 
