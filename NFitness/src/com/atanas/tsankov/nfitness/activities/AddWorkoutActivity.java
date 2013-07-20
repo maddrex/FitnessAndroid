@@ -1,6 +1,4 @@
-package com.atanas.tsankov.nfitness;
-
-import com.atanas.tsankov.constants.Constants;
+package com.atanas.tsankov.nfitness.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +7,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.atanas.tsankov.constants.Constants;
+import com.atanas.tsankov.nfitness.R;
 
 public class AddWorkoutActivity extends Activity {
 

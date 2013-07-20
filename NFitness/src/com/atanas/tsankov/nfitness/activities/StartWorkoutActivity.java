@@ -1,7 +1,9 @@
-package com.atanas.tsankov.nfitness;
+package com.atanas.tsankov.nfitness.activities;
 
 import android.app.Activity;
 import android.os.Bundle;
+
+import com.atanas.tsankov.nfitness.R;
 
 public class StartWorkoutActivity extends Activity {
 

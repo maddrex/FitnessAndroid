@@ -1,4 +1,4 @@
-package com.atanas.tsankov.nfitness;
+package com.atanas.tsankov.nfitness.activities;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.atanas.tsankov.constants.Constants;
+import com.atanas.tsankov.nfitness.R;
 import com.atanas.tsankov.nfitness.adapters.SetProgrammeAdapter;
 import com.atanas.tsankov.nfitness.beans.Programme;
 import com.atanas.tsankov.nfitness.beans.Workout;
@@ -32,6 +33,7 @@ public class SetProgrammeActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		programme = new Programme();
 		setContentView(R.layout.set_programme_screen);
 		addWorkoutButton = (Button) findViewById(R.id.set_programme_add_workout_button);
 		setAddWorkoutOnClick();

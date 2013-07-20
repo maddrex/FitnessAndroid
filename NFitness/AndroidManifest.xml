@@ -15,7 +15,7 @@
         android:theme="@android:style/Theme.NoTitleBar" >
         <activity
             android:noHistory="true"
-            android:name="com.atanas.tsankov.nfitness.SplashScreenActivity"
+            android:name="com.atanas.tsankov.nfitness.activities.SplashScreenActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,27 +24,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.atanas.tsankov.nfitness.MainMenuActivity"
+            android:name="com.atanas.tsankov.nfitness.activities.MainMenuActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.atanas.tsankov.nfitness.PickWorkoutActivity"
+            android:name="com.atanas.tsankov.nfitness.activities.PickWorkoutActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.atanas.tsankov.nfitness.StartWorkoutActivity"
+            android:name="com.atanas.tsankov.nfitness.activities.StartWorkoutActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.atanas.tsankov.nfitness.AddWorkoutActivity"
+            android:name="com.atanas.tsankov.nfitness.activities.AddWorkoutActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.atanas.tsankov.nfitness.AddExerciseActivity"
+            android:name="com.atanas.tsankov.nfitness.activities.AddExerciseActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.atanas.tsankov.nfitness.SetProgrammeActivity"
+            android:name="com.atanas.tsankov.nfitness.activities.SetProgrammeActivity"
             android:screenOrientation="portrait" >
         </activity>
     </application>

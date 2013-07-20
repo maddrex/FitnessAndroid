@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.atanas.tsankov.nfitness.R;
-import com.atanas.tsankov.nfitness.SetProgrammeActivity;
+import com.atanas.tsankov.nfitness.activities.SetProgrammeActivity;
 import com.atanas.tsankov.nfitness.beans.Workout;
 import com.atanas.tsankov.nfitness.holders.SetProgrammeHolder;
 

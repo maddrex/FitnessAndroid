@@ -1,4 +1,4 @@
-package com.atanas.tsankov.nfitness;
+package com.atanas.tsankov.nfitness.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
+
+import com.atanas.tsankov.nfitness.R;
 
 public class SplashScreenActivity extends Activity {
 	private boolean isStopped = false;
