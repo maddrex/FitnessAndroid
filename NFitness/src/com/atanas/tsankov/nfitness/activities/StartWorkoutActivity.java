@@ -6,7 +6,7 @@ import android.os.Bundle;
 import com.atanas.tsankov.nfitness.R;
 
 public class StartWorkoutActivity extends Activity {
-
+	//test
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
